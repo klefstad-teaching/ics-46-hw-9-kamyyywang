@@ -33,7 +33,7 @@ bool edit_distance_within(const string& str1, const string& str2, int d) {
 
 vector<string> generate_word_ladder(const string& begin_word, const string& end_word, const set<string>& word_list) {
     if (begin_word == end_word) {
-        return {begin_word};
+        return {};
     }
     
     queue<vector<string>> ladder_queue;
@@ -64,9 +64,8 @@ void print_word_ladder(const vector<string>& ladder) {
         cout << "No word ladder found." << endl;
     } else {
         for (const auto& word : ladder) {
-            cout << word << " ";
+            cout << "Word ladder found: " << word << " " << endl;
         }
-        cout << endl;
     }
 }
 
