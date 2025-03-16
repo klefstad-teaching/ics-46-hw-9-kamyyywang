@@ -31,9 +31,6 @@ vector<int> extract_shortest_path(const vector<int>& distances, const vector<int
         path.push_back(v);
     }
     reverse(path.begin(), path.end());
-    if (path.size() == 1 && path[0] != 0) {
-        return {};
-    }
     return path;
 }
 
